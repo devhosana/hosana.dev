@@ -1,0 +1,381 @@
+
+/* 
+- rem & em nÃ£o sÃ£o baseados no tamanho de fonte do HTML do usuÃ¡rio 
+- 1rem & 1em === 16px 
+- EntÃ£o nosso cÃ¡lculo serÃ¡ sempre:
+- Medida viewport em px / 16 = valor do brekpoint em "em"
+*/
+
+/* *********************** */
+/* ALTURA: Abaixo de 577px */
+/*   PortÃ¡teis 13" e 14"   */
+/* *********************** */
+
+
+@media (max-height: 38em) {
+
+  html {
+
+    font-size: 53.125% !important;
+    
+    /* Relembrando, valor atual Ã© 62.5% */
+    /*      10px / 16px === 0,625       */
+    /*     (16px / 100) * 62.5 === 10   */
+
+    /*
+    Nesse cÃ¡lculo cada REM Ã© igual a 10 px
+    */
+
+    /* 
+    Diminuindo porcentagem, tudo na pÃ¡gina diminui proporcionalmente
+    8.5 / 16 === 0.53125
+    */
+
+    /* 53.125% === 8.5px */
+ 
+  }
+
+  .heading__primary {
+    font-size: 2.6rem;
+  }
+  
+  .heading__text  {
+    font-size: 5.2rem !important;
+  }
+
+  .btn--tell__more {
+    margin-top: 6.4rem;
+    font-size: 1.9rem;
+  }
+
+}
+
+
+/* ******************************** */
+/*    COMPRIMENTO: Abaixo 1366px    */
+/*   PortÃ¡teis c/ menos resoluÃ§Ã£o   */
+/* ******************************** */
+
+
+@media (max-width: 85.375em) {
+
+  html {
+    /* 56.25% === 9px */
+    font-size: 56.25%;
+  }
+
+}
+
+
+/* ******************************** */
+/*    COMPRIMENTO: Abaixo 1180px    */
+/* ******************************** */
+
+@media (max-width: 73.75em) {
+
+  html {
+    /* 53.125% === 8.5px */
+    font-size: 53.125%;
+  }
+
+  .upwards__button {
+    bottom: 5% !important;
+    right: 3% !important;
+  }
+
+  .heading__text {
+    font-size: 5.2rem;
+  }
+
+  .heading__tertiary {
+    font-size: 1.6rem;
+    justify-self: center;
+    grid-column: span 3;
+  }
+
+  .works__grid {
+    gap: 2.4rem;
+  }
+
+  .work__info {
+    width: 80%;
+    height: 80%;
+  }
+
+  .about__paragraph {
+    font-size: 1.75rem;
+    margin: 0;
+  }
+
+  .skill__others {
+    font-size: 1.85rem;
+  }
+
+}
+
+
+/* ******************************* */
+/*    COMPRIMENTO: Abaixo 944px    */
+/* ******************************* */
+
+
+@media (max-width: 59em) {
+
+  .section--hidden {
+    transform: rotate3d(0, 1, 0, 35deg) scale(0.95) !important;
+  }
+
+  .nav__list {
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    background-color: var(--color--main__tint);
+
+    width: 100%;
+    height: 100vh;
+
+    transform: translateX(100%);
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 4.8rem;
+    opacity: 0.99;
+    font-size: 3rem;
+
+    padding-bottom: 12.8rem;
+  }
+
+  .nav__link:active {
+    color: var(--color--secondary) !important;
+  }
+
+  .nav__mobile {
+    display: inline-block;
+    pointer-events: auto;
+    visibility: visible;
+  }
+
+  .nav__mobile:active {
+    color: var(--color--secondary); 
+  }
+
+  .dropdown__menu {
+    top: 140%;
+    right: 4.47%;
+    
+    opacity: 1;
+    transform: translateY(0);
+    z-index: 0;
+  }
+
+  .nav__link--dropdown:link,
+  .nav__link--dropdown:visited,
+  .nav__link--dropdown:hover,
+  .nav__link--dropdown:active {
+    color: var(--color--white);
+    font-size: 2.4rem;
+    font-weight: 400;
+  }
+
+  .upwards__button {
+    width: 4.8rem !important; 
+    height: 4.8rem !important;
+  }
+
+  .heading__text {
+    margin: 0 6.4rem;
+  }
+
+  .about__wrapper {
+    grid-template-columns: 80fr 20fr;
+    gap: 2.4rem;
+    margin: 0 2.4rem 4.8rem 2.4rem;
+  }
+
+  .skill__container {
+    width: 27.54rem;
+  }
+
+  .skill__title {
+    font-size: 2.5rem;
+  }
+
+  .skill__logo {
+    font-size: 4.4rem;
+  }
+
+  .work__info {
+    width: 100%;
+    height: 100%;
+  }
+
+}
+
+
+/* ******************************* */
+/*    COMPRIMENTO: Abaixo 800px    */
+/* ******************************* */
+
+
+@media (max-width: 50em) {
+
+  html {
+    /* 50% === 8px */
+    font-size: 50%;
+  }
+
+  .heading__text {
+    margin: 0;
+  }
+
+  .btn--tell__more {
+    margin-top: 6.4rem;
+  }
+
+  .about__left-side {
+    gap: 1.2rem !important;
+  }
+
+  .skills__container {
+    grid-template-columns: repeat(2, 1fr);grid-template-rows: repeat(4, auto);
+    column-gap: 2.4rem;
+  }
+
+  .skill__title {
+    font-size: 2rem;
+  }
+
+  .skill__logo {
+    font-size: 4rem;
+  }
+
+  .skill__container--helper__html {
+    grid-row: 2;
+    justify-self: right;
+  }
+  
+  .skill__container--helper__css {
+    grid-row: 2;
+    justify-self: left;
+  }
+  
+  .skill__container--helper__js {
+    grid-row: 3;
+    justify-self: right;
+  }
+  
+  .skill__container--helper__react {
+    grid-row: 3;
+    justify-self: left;
+  }
+
+  .works__grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .work__info {
+    width: 60%;
+    height: 60%;
+  }
+  
+}
+
+
+/* ******************************* */
+/*    COMPRIMENTO: Abaixo 672px    */
+/* ******************************* */
+
+
+@media (max-width: 42.75em) {
+
+  .heading__primary {
+    font-size: 2rem;
+  }
+
+  .heading__text {
+    font-size: 3.6rem;
+  }
+
+  .heading__tertiary {
+    grid-column: 1;
+  }
+
+  .btn--tell__more {
+    margin-top: 4.8rem;
+    font-size: 1.6rem;
+    padding: 1rem 2rem;
+  }
+
+  .about__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+  }
+
+  .about__right-side {
+    justify-self: left
+  }
+
+  .about__img {
+    width: 38%;
+  }
+
+  .about__wrapper {
+    margin-bottom: 6.4rem;
+  }
+
+  .heading__secondary--helper-1,
+  .heading__secondary--helper-2 {
+    font-size: 3rem;
+  }
+
+  .skills__container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, auto);
+  }
+
+  .skill__container {
+    padding: 2.4rem;
+  }
+
+  .skill__container--helper__html {
+    grid-row: 2;
+    justify-self: center;
+  }
+  
+  .skill__container--helper__css {
+    grid-row: 3;
+    justify-self: center;
+  }
+  
+  .skill__container--helper__js {
+    grid-row: 4;
+    justify-self: center;
+  }
+  
+  .skill__container--helper__react {
+    grid-row: 5;
+    justify-self: center;
+  }
+
+  .skill__container--helper__react:before {
+    right: -9.5%; 
+  }
+
+  .work__info {
+    width: 100%;
+    height: 100%;
+    gap: 0.6rem;
+  }
+
+  .footer__container {
+    flex-direction: column;
+    gap: 1.4rem;
+    padding: 1.6rem 2rem
+  }
+
+}

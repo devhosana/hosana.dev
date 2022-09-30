@@ -1,0 +1,140 @@
+/*
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 /
+30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 /
+64 / 80 / 96 / 128 / 144 / 160
+*/
+
+.viewport__container {
+  padding: 0 3.2rem;
+}
+
+.main__container {
+  max-width: 130rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1.4rem 2.8rem;
+  border-radius: 7px;
+
+  transition: 0.3s all;
+  cursor: pointer;
+
+  font-weight: 700;
+  font-family: 'Rubik', sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  
+  background-color: var(--color-main);
+
+  color: var(--color--white);
+  border: 2px solid var(--color--white);
+}
+
+.btn:hover,
+.btn:active {
+  color: var(--color--secondary);
+  border: 2px solid var(--color--secondary);
+}
+
+.heading__primary {
+  margin-bottom: 3rem;
+  text-align: center;
+  line-height: 1.4;
+  font-size: 2.8rem;
+  font-weight: 400;
+  color: var(--color--secondary);
+}
+
+.heading__secondary {
+  font-size: 3.6rem;
+  margin-bottom: 4.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  /* 
+  TRANSFORM RESOLVEU TANTO PROBLEMA DE CENTRALIZAÃ‡ÃƒO
+  COMO COLOCAR HEADING POR CIMA DO EFEITO ABAIXO
+  
+  nÃ£o sei porque estou gritando rs
+  */
+
+  transform: translate(-50%, 0);
+  left: 50%;
+
+  /* Para futura animaÃ§Ã£o ao revelar sections */
+  /* transition: all 0.4s; */
+}
+
+.heading__tertiary {
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  color: var(--color-main);
+}
+
+/* ------- */
+/* HELPERS */
+/* ------- */
+
+.heading__secondary--helper-1 {
+  position: relative;
+  display: inline-block;
+}
+
+.heading__secondary--helper-1::after {
+  content: " ";
+  position: absolute;
+  transition: all 0.4s;
+  background-color: var(--color--secondary);
+  bottom: -22%;
+  left: 49.8%;
+  transform: translate(-50%, 0);
+  width: 101.5%;
+  height: 60%;
+  z-index: -1;
+}
+
+.heading__secondary--helper-2 {
+  position: relative;
+  display: inline-block;
+  color: var(--color--white);
+}
+
+.heading__secondary--helper-2::after {
+  content: " ";
+  position: absolute;
+  transition: all 0.4s;
+
+  background-color: var(--color--main__tint);
+
+  transform: translate(-50%, 0);
+
+  /* POSIÃ‡ÃƒO EM RELAÃ‡ÃƒO AO HEADING */
+  bottom: -22%;
+  left: 49.8%;
+  
+  /* TAMANHO DA NOSSA BARRA */
+  width: 101.5%;
+  height: 60%;
+
+  /* POR ABAIXO DO HEADING (em conjunto com translate) */
+  z-index: -1;
+}
+
+.heading--helper {
+  color: var(--color--white);
+  text-transform: unset;
+  margin-bottom: 2rem;
+  text-align: center;
+  transform: translateY(-100%);
+  font-size: 2rem;
+
+
+}

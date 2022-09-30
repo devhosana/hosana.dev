@@ -1,0 +1,301 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+    <!-- Descrição para navegador/motores de busca -->
+    <meta
+      name="description"
+      content="hosana.dev - Olá sou desenvolvedor front-end"
+    />
+
+    <!-- Para media query funcionar -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>HOSANA | Front-end development</title>
+
+    <script defer src="script.js"></script>
+    
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/components.css" rel="stylesheet" />
+    <link href="css/queries.css" rel="stylesheet" />
+  </head>
+
+   <!--
+      Hello recruiter, how are you doing? I genuinely hope you having a good day. 
+      As a quick note I would like to say that I know, my presentation site it's not fantastic, 
+      on the other hand it does the job. Just don't think that I'm settled with this result, 
+      I love coding so it's a matter of time to get better and better.
+   -->
+
+  <body>
+
+   <!-- ------- -->
+   <!-- NAV BAR -->
+   <!-- ------- -->
+
+      <header class="header">
+         <div class="nav--helper">
+            <nav class="nav">
+           
+               <div class="logo__link">
+                  <p class="logo__text">hosana</p>
+               </div>
+          
+            
+               <ul class="nav__list">
+                  <li class="nav__item">
+                     <a href="#works" class="nav__link">Projects</a>
+                  </li>
+                  
+                  <li class="nav__item">
+                     <a href="https://github.com/diegodiego1989" target="_blank" class="nav__link">Github</a>
+                  </li>
+   
+                  <li class="nav__item">
+                     <a href="blog.html" class="nav__link" target="_blank">Blog</a>
+                  </li>
+
+                  <div class="dropdown">
+                     <li class="nav__item">
+                        <a href="#" class="nav__link nav__link--contacts">Contacts</a>
+                     </li>
+   
+                     <div class="dropdown__menu">
+                        <a
+                           href="https://t.me/diegodiego1989"
+                           class="nav__link--dropdown"
+                           target="_blank"
+                        >Telegram</a>
+                     
+                        <a
+                           href="https://www.linkedin.com/in/diego-oliveira-rocha-784559203/"
+                           class="nav__link--dropdown"
+                           target="_blank"
+                        >Linked-in</a>
+
+                        <a
+                           href='mailto:hosana.dev@gmail.com'
+                           class="nav__link--dropdown"
+                           target="_blank"
+                        >E-mail</a>
+                     </div>
+
+                  </div>
+               
+               </ul>
+   
+               <ion-icon name="menu-outline" class="nav__mobile"></ion-icon>
+            </nav>
+         </div>
+
+         <div class="heading__container--helper">
+            <div class="heading__container">
+               <h1 class="heading__primary">Hi! I'm Diego<br>Front-end developer</h1>
+   
+               <p class="heading__text">
+                  Coding is about solving problems, but solving problems is not always coding, right?
+               </p>
+   
+               <button class="btn btn--tell__more">Tell me more</button>
+            </div>
+         </div>
+
+         <div class="upwards__button">
+               <img class="translate__icon" src="icons/portugal.svg" alt="Portugal flag icon"/>
+         </div>
+      </header>
+
+      <main>
+
+         <!-- ------------ -->
+         <!-- ABOUT/SKILLS -->
+         <!-- ------------ -->
+
+         <section class="section section--skills" id="skills">
+            <div class="main__container">
+               <h2 class="heading__secondary heading__secondary--helper-1">About me</h2>
+            
+               <div class="about__wrapper">
+                  <div class="about__left-side">
+                     <p class="about__paragraph">
+                        If the answer is yes, then that's a good sign, I'm on the right track, I took the initiative to learn JavaScript with the main goal of bringing to life ideas that solve problems, before learning code I already was a problem-solver.
+                     </p>
+
+                     <p class="about__paragraph">
+                        I'm in a career transition, from entrepeneur in the technology area, but not leaving aside what I've learned so far, management that the relationship with customers and employees teaches, lead is also give in when necessary, it is essential to cherish a good working environment and not least, persistence (thank you God) acquired on the way to become a developer.
+
+
+            
+                     </p>
+
+                  </div>
+
+                  <div class="about__right-side">
+                     <picture>
+                        <source srcset="img/me-lazy.webp" type="image/webp">
+                        <source srcset="img/me-lazy.jpg" type="image/jpg">
+                        
+                        <img
+                           src="img/me-lazy.webp"
+                           alt="Diego's profile pic"
+                           class="about__img"
+                        />
+                     </picture>
+
+                     <p class="about__name">Diego Rocha</p>
+                     <p class="about__text">Currently coding</p>
+                     <p class="about__text">
+                        from Portugal
+                        <img class="about__flag" src="icons/portugal.svg" alt="Portugal flag icon"/>
+                     </p>
+                  </div>
+               </div>
+
+               
+               <div class="skills__container">
+                  <h3 class="heading__tertiary">Technologies that I work</h3>
+
+                  <div class="skill__container skill__container--helper__html">
+                     <p class="skill__title">HTML 5</p>
+                     <ion-icon name="logo-html5" class="skill__logo skill__logo--helper"></ion-icon>
+                  </div>
+                  
+                  <div class="skill__container skill__container--helper__css">
+                     <p class="skill__title">CSS 3</p>
+                     <ion-icon name="logo-css3" class="skill__logo skill__logo--helper"></ion-icon>
+                  </div>
+
+                  <div class="skill__container skill__container--helper__js">
+                     <p class="skill__title">JavaScript</p>
+                     <ion-icon name="logo-javascript" class="skill__logo"></ion-icon>
+                  </div>
+
+                  <div class="skill__container skill__container--helper__react">
+                     <p class="skill__title">React JS</p>
+                     <ion-icon name="logo-react"  class="skill__logo"></ion-icon>
+                  </div>
+               </div>
+   
+            </div>
+         </section>
+
+         <!-- ----- -->
+         <!-- WORKS -->
+         <!-- ----- -->
+
+         <section id="works" class="section">
+            <div class="main__container">
+               <h2 class="heading__secondary heading__secondary--helper-2">Projects</h2>
+               <h3 class="heading--helper">Hover the mouse to see more details</h3>
+
+               <div class="works__grid">
+           
+                  <div class="work">
+                     <picture>
+                        <source srcset="img/sample1-lazy.webp" type="image/webp">
+                        <source srcset="img/sample1-lazy.jpg" type="image/jpg">
+
+                        <img
+                           src="img/sample1-lazy.webp"
+                           class="work__image"
+                           alt="job sample"
+                        />
+                     </picture>
+                 
+                     <div class="work__info hidden">
+                    
+                        <h4>
+                           <a href="https://theworldquiz.netlify.app/" target="_blank" class="work__link">World Quiz</a>
+                        </h4>
+
+                        <p class="work__text">
+                           Test your knowledge about countries and flags, no question is hard coded, all made using the rest countries API (work in progress).
+                        </p>
+
+                        <div>
+                           <a href="https://theworldquiz.netlify.app/" target="_blank" class="work__link">
+                              <ion-icon name="link-outline" class="work__icon"></ion-icon>
+                           </a>
+                           
+                           <a href="https://github.com/diegodiego1989/worldquiz" target="_blank" class="work__link">
+                              <ion-icon name="logo-github" class="work__icon"></ion-icon>
+                           </a>
+
+                           <ion-icon name="information-circle-outline" class="work__icon work__icon--helper"></ion-icon>
+                        </div>
+
+                     </div>
+                  </div>
+                  
+                  <div class="work">
+                     <picture>
+                        <source srcset="img/sample2-lazy.webp" type="image/webp">
+                        <source srcset="img/sample2-lazy.jpg" type="image/jpg">
+                        <img
+                           src="img/sample2-lazy.webp"
+                           class="work__image"
+                           alt="job sample"
+                        />
+                     </picture>
+                 
+                     <div class="work__info hidden">
+                    
+                        <h4>
+                           <a href="#" class="work__link">Sample Work #2</a>
+                        </h4>
+
+                        <p class="work__text">
+                           This project is under development, soon it will be ready, come back later to check it out and give me feedback if you like it.
+                        </p>
+
+                        <div>
+                           <a href="https://github.com/diegodiego1989" class="work__link">
+                              <ion-icon name="link-outline" class="work__icon" target="_blank"></ion-icon>
+                           </a>
+                           
+                           <a href="https://github.com/diegodiego1989" class="work__link" target="_blank">
+                              <ion-icon name="logo-github" class="work__icon"></ion-icon>
+                           </a>
+
+                           <ion-icon name="information-circle-outline" class="work__icon  work__icon--helper"></ion-icon>
+                        </div>
+
+                     </div>
+                  </div>
+                  
+               </div>
+
+            </div>
+         </section>
+      </main>
+
+      <!-- ------ -->
+      <!-- FOOTER -->
+      <!-- ------ -->
+
+      <footer>
+         <div class="footer__container">
+            <div class="footer__wrapper">
+               Hosana Web Development &nbsp;
+               <p class="footer__year">2022</p>
+            </div>
+
+            <a
+               href="https://www.patheos.com/blogs/christiancrier/2015/08/15/what-does-hosanna-mean-a-biblical-definition-of-hosanna/"
+               target="_blank"
+               class="footer__link">
+               Hosanna in the highest
+            </a>
+         </div>
+      </footer>
+
+      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  </body>
+</html>
+
+<!-- soli Deo gloria -->
