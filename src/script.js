@@ -13,6 +13,7 @@ const getImgType = function() {
 // State variables
 let mobileNavigation = false;
 let firstTime = true;
+let newText;
 const currentImgType = getImgType();
 
 
@@ -74,11 +75,8 @@ const textPortuguese = [
   "Programar é resolver problemas, mas resolver problemas nem sempre é programar, correto?",
   "Conte-me mais",
   "Sobre mim",
-
   "Se a resposta for sim, então é um bom sinal, estou no caminho certo, tomei a iniciativa de aprender JavaScript com o objetivo principal de dar vida a ideias que resolvam problemas, antes de aprender código eu já era um solucionador de problemas.",
-
   "Estou em transição de carreira, anteriormente empreendedor da área de tecnologia, mas não deixando de lado o que já aprendi até aqui: gestão que o relacionamento com clientes e colaboradores ensina, liderar também é ceder quando necessário, é essencial prezar por um bom ambiente de trabalho, e não menos importante, persistência (obrigado Deus) adquirida na caminhada para me tornar desenvolvedor.",
-
   "Programando",
   `de Portugal
     <img class='about__flag' src='icons/portugal.svg' alt='Portugal flag icon'/>
@@ -149,24 +147,21 @@ navList.addEventListener("mouseout", function(event) {
 
 
 const interactDropdownMenu = function(event) {
-  
-  // Efeito não deve acontecer no mobile
-  // if (mobileNavigation) return;
 
   // Selecionar elemento dropdown__menu e cor dinâmicamente
   const dropdownMenu = event.currentTarget.querySelector(".dropdown__menu");
-
   const color = event.type === "mouseover" ? "#454560" : "#fff";
 
   // Aplicar efeitos
   dropdownMenu.classList.toggle("dropdown__menu--active");
 
+  // No Mobile retornar a partir daqui
+  if (mobileNavigation) return;
+
   if (event.target.classList.contains("nav__link--dropdown") ||
-      event.target.classList.contains("dropdown__menu")) {
+    event.target.classList.contains("dropdown__menu")) {
     navLinks.forEach(navLink => navLink.style.color = color);
   };
-
-  // navLinks[0].style.color = navLinks[1].style.color = navLinks[2].style.color = color;
 
 };
 
@@ -401,7 +396,17 @@ allWorks.forEach(function(work) {
 
 
 // Caso janela já inicie com tamanho menor que 945px, de forma que EL abaixo não entre em ação
-if (window.innerWidth < 945) mobileNavigation = true;
+if (window.innerWidth < 945) {
+
+  mobileNavigation = true;
+
+  if (navLinks[0].textContent === "Projects") {
+    headingProjectsHelper.textContent = headingProjectsHelper.textContent.replace("Hover the mouse", "Tap");
+  } else {
+    headingProjectsHelper.textContent = headingProjectsHelper.textContent.replace("Passe o mouse", "Toque");
+  };
+
+};
 
 const toggleHoverFX = function(event) {
 
@@ -409,48 +414,30 @@ const toggleHoverFX = function(event) {
 
   mobileNavigation = windowWidth < 945 ? true : false;
   navList.style.transform = windowWidth < 945 ? "translateX(100%)" : "translateX(0)";
-
-  // Repor navMobileIcon quando diminuir janela, aumentar, e depois diminuir novamente
-  if (windowWidth < 945) navMobileIcon.name = "menu-outline";
   
-  let newText;
-
   // Texto dinamico Tap << - >> Hover
   if (windowWidth < 945) {
-
-  //   if (navLinks[0].textContent === "Projects") {
-  //     newText = headingProjectsHelper.textContent.replace("Hover the mouse", "Tap");
-  //   } else {
-  //     newText = headingProjectsHelper.textContent.replace("Passe o mouse", "Toque");
-  //   };
     
-  // } else {
+    // Repor navMobileIcon quando diminuir janela, aumentar, e depois diminuir novamente
+    navMobileIcon.name = "menu-outline";
 
-  //   if (navLinks[0].textContent === "Projects") {
-  //     newText = headingProjectsHelper.textContent.replace("Tap", "Hover the mouse");
-  //   } else {
-  //     newText = headingProjectsHelper.textContent.replace("Toque", "Passe o mouse");
-  //   };
+    //   if (navLinks[0].textContent === "Projects") {
+    //     newText = headingProjectsHelper.textContent.replace("Hover the mouse", "Tap");
+    //   } else {
+    //     newText = headingProjectsHelper.textContent.replace("Passe o mouse", "Toque");
+    //   };
+      
+    // } else {
+
+    //   if (navLinks[0].textContent === "Projects") {
+    //     newText = headingProjectsHelper.textContent.replace("Tap", "Hover the mouse");
+    //   } else {
+    //     newText = headingProjectsHelper.textContent.replace("Toque", "Passe o mouse");
+    //   };
 
   };
   
-  headingProjectsHelper.textContent = newText;
-
-  /*
-  // Tentativa de melhoria no código acima, depois continuarei
-  // .replace não retorna false quando nao encontra texto (como esperavámos)
-  if (windowWidth < 945) {
-    newText = 
-      headingProjectsHelper.textContent.replace("Hover the mouse", "Tap") ??
-      headingProjectsHelper.textContent.replace("Passe o mouse", "Toque")
-    ;
-  } else {
-    newText =
-      headingProjectsHelper.textContent.replace("Tap", "Hover the mouse") ??
-      headingProjectsHelper.textContent.replace("Toque", "Passe o mouse")
-    ;
-  };
-  */
+  // headingProjectsHelper.textContent = newText;
   
 };
 
@@ -660,3 +647,18 @@ imgTargets.forEach(function(img) {
 
 // "THAT'S ALL FOLKS!" //
 
+/*
+// Tentativa de melhoria no código linha 418, depois continuarei
+// .replace não retorna false quando nao encontra texto (como esperavámos)
+if (windowWidth < 945) {
+  newText = 
+    headingProjectsHelper.textContent.replace("Hover the mouse", "Tap") ??
+    headingProjectsHelper.textContent.replace("Passe o mouse", "Toque")
+  ;
+} else {
+  newText =
+    headingProjectsHelper.textContent.replace("Tap", "Hover the mouse") ??
+    headingProjectsHelper.textContent.replace("Toque", "Passe o mouse")
+  ;
+};
+*/

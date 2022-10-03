@@ -93,8 +93,7 @@ body {
 }
 
 .logo__text {
-  font-weight: 900;
-  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
   letter-spacing: 0.5px;
   font-size: 2.4rem;
 
@@ -316,7 +315,7 @@ body {
 
 .about__paragraph {
   line-height: 2;
-  font-size: 1.85rem;
+  font-size: 1.9rem;
   font-weight: 400;
   font-family: 'Roboto', sans-serif;
 }
@@ -460,19 +459,6 @@ body {
   height: 3rem;
   
   background-color: var(--color--white);
-}
-
-.skill__others {
-  text-align: center;
-  margin-top: 4.8rem;
-  font-size: 2rem;
-  font-family: 'Roboto', sans-serif;
-}
-
-span {
-  padding-bottom: 0.3rem;
-  border-bottom: 2px solid var(--color--secondary);
-  font-weight: 600;
 }
 
 /* ------------- */
