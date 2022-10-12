@@ -83,7 +83,7 @@ const textPortuguese = [
   `,
   "Tecnologias que trabalho",
   "Projetos",
-  "Passe o mouse para ver mais detalhes",
+  "Passe o rato para ver mais detalhes",
   "Teste seu conhecimento sobre países e bandeiras, perguntas aleatórias usando a API rest countries. (em desenvolvimento)",
   "Esse projeto está em desenvolvimento, ficará pronto em breve, volte mais tarde e me dê um retorno sobre se gostou.",
   "Hosana nas alturas",
@@ -270,9 +270,6 @@ const translateTo = function(language) {
 
   // Selecionando para qual idioma traduziremos
   const languageArray = language === "portuguese" ? textPortuguese : textEnglish;
-
-  // Traduzindo pseudo class
-  skillContainerReact.classList.toggle("skill__container--helper__react--pt");  
 
   // Executando tradução
   textVariables.forEach((element, index) => element.innerHTML = languageArray[index]);
@@ -596,6 +593,7 @@ skillsContainer.addEventListener("mouseout", function(event) {
 /////////////////// LAZY LOAD IMGS ////////////////////
 ///////////////////////////////////////////////////////
 
+/*
 
 const loadImg = function(entries, observer) {
   
@@ -641,8 +639,9 @@ imgTargets.forEach(function(img) {
   imgObserver.observe(img);
 });
 
+Dar uma olhada posteriormente no attribute loading=lazy no HTML
 
-
+*/
 
 
 // "THAT'S ALL FOLKS!" //
