@@ -660,4 +660,5 @@ if (windowWidth < 945) {
     headingProjectsHelper.textContent.replace("Toque", "Passe o mouse")
   ;
 };
+
 */
