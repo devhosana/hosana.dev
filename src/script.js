@@ -63,6 +63,7 @@ const textVariables = [
   headingProjectsHelper,
   workText[0],
   workText[1],
+  workText[2],
   footerLink,
 ];
 
@@ -84,8 +85,13 @@ const textPortuguese = [
   "Tecnologias que trabalho",
   "Projetos",
   "Passe o rato para ver mais detalhes",
-  "Teste seu conhecimento sobre países e bandeiras, perguntas aleatórias usando a API rest countries. (em desenvolvimento)",
+
+  "Teste seu conhecimento sobre países e bandeiras, perguntas aleatórias usando a API rest countries. (quase pronto)",
+
+  "Orgulhosamente apresento meu primeiro projeto com uso real, QR code escaneável para ementa online, feito com React JS.",
+
   "Esse projeto está em desenvolvimento, ficará pronto em breve, volte mais tarde e me dê um retorno sobre se gostou.",
+
   "Hosana nas alturas",
 ];
 
