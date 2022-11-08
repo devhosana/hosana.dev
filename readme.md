@@ -2,7 +2,7 @@
 
 **Project goal**
 
-My personal website to introduce myself and show what I've already done in terms of code and developing 
+Personal website to introduce myself and show what I have done in therms of coding.
 
 **Here I use**
 
