@@ -30,6 +30,7 @@ const upButton = document.querySelector(".upwards__button");
 const dropdown = document.querySelector(".dropdown");
 const logoLink = document.querySelector(".logo__link");
 const imgTargets = document.querySelectorAll(`source[srcset$='${getImgType()}']`);
+const footerYear = document.querySelector(".footer__year");
 
 
 // Translate variables
@@ -593,6 +594,14 @@ skillsContainer.addEventListener("mouseout", function(event) {
   };
     
 });
+
+
+///////////////////////////////////////////////////////
+/////////////////// Display year in footer ////////////////////
+///////////////////////////////////////////////////////
+
+const currentYear = new Date().getFullYear();
+footerYear.textContent = currentYear;
 
 
 ///////////////////////////////////////////////////////
